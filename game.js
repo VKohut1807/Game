@@ -61,8 +61,9 @@ function draw(){
 	}
 
 	if (xPos + plane.width >= obstacles[i].x 
-		&& xPos <= obstacles[i].x + obstaclesUp.width 
-		&& (yPos <= obstacles[i].y + obstaclesUp.height || yPos + plane.height >= obstacles[i].y + obstaclesUp.height + hole) 
+	    && xPos <= obstacles[i].x + obstaclesUp.width 
+	    && (yPos <= obstacles[i].y + obstaclesUp.height 
+		|| yPos + plane.height >= obstacles[i].y + obstaclesUp.height + hole) 
 		|| yPos + plane.height >= cvs.height - fg.height){
 		location.reload(); 
 	} 
